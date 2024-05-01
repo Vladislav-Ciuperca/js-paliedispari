@@ -23,3 +23,19 @@ function sommaNumeri(num1, num2) {
     const risultato = num1 + num2;
     return risultato;
 }
+//creo la funzione per pari o dispari
+function PariOrDispari(num) {
+    let risultato;
+    if (num == 0) {
+        risultato = "inserisci prima uin numero"
+    }
+
+    else if (num % 2 == 0) {
+        risultato = "pari"
+    }
+    else {
+        risultato = "dispari"
+    }
+
+    return risultato
+}
