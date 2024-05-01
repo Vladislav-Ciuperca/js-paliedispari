@@ -39,3 +39,29 @@ function PariOrDispari(num) {
 
     return risultato
 }
+
+
+
+function prova2() {
+    // creo un numero random
+    let aiNum = Math.floor((Math.random() * 5) + 1);
+    // leggo inout user
+    let usNum = document.getElementById("numero").value
+    // richiamo la funzione di somma
+    let risultato = sommaNumeri(parseInt(usNum), parseInt(aiNum))
+    console.log(usNum, " + ", aiNum, " = ", risultato)
+    // richiamo la funzione per pari o dispari
+    let esito = PariOrDispari(risultato);
+    console.log(esito)
+    // leggo la scelta della scommessa
+    let scelta = document.querySelector('input[name="scelta"]:checked')
+    // ciclo per decidere esito scopmmessa
+    if (scelta.value == esito) {
+        console.log("hai vinto")
+        document.getElementById("esito").innerHTML = `${usNum} + ${aiNum} = ${risultato}. ${esito} hai vinto`
+    }
+    else {
+        console.log("hai perso")
+        document.getElementById("esito").innerHTML = `${usNum} + ${aiNum} = ${risultato}. ${esito} hai perso`
+    }
+}
