@@ -16,3 +16,10 @@ function verifica() {
         document.getElementById("risultato").innerHTML = "no"
     )
 }
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+//creo la funzione per sommare
+function sommaNumeri(num1, num2) {
+    const risultato = num1 + num2;
+    return risultato;
+}
